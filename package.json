@@ -1,0 +1,26 @@
+{
+  "name": "playwright-test-suite",
+  "version": "1.0.0",
+  "author": "Gobinath",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "description": "Sample project to run playwright tests using playwright runner on LambdaTest platform",
+  "scripts": {
+    "test": "npx playwright test --config=./playwright.config.ts",
+    "test:allure": "playwright test --reporter=allure-playwright",
+    "allure-generate": "allure generate allure-results --clean -o allure-report",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.35.0",
+    "@types/node": "^22.5.3",
+    "allure-commandline": "^2.30.0",
+    "allure-playwright": "^2.15.1",
+    "playwright": "^1.41.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
